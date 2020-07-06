@@ -36,8 +36,8 @@ def start(chat, message):
         "<b>Welcome!</b>"
         "\nWith this bot you can <b>short</b> any (valid) <b>URL</b> in the <b>web!</b>"
         "\nSimple use me <b>inline</b> in <b>any chat</b>!"
-        "\n\n👤 <b>Developed by</b> @MarcoBuster"
-        "\n👥 <b>Join in discussion group</b>: @MarcoBusterGroup"
+        "\n\n👤 <b>Developed by</b> @sai1103"
+        "\n👥 <b>Join in discussion group</b> @siddarthaopinion"
         "\n🌐 <b>Source code</b>: <a href=\"github.com/MarcoBuster/ShortURLsBot\">GitHub, MIT license</a>"
     )
     bot.api.call("sendMessage", {
