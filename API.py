@@ -1,11 +1,7 @@
 from CONFIG import *
 
 from pyshorteners import Shortener
-google = Shortener('Google', api_key=GOOGLE_API_KEY, timeout=10)
-tinyurl = Shortener('Tinyurl', timeout=10)
 adfly = Shortener('Adfly', uid=ADFLY_UID, key=ADFLY_API_KEY, type='int', timeout=10)
-isgd = Shortener('Isgd', timeout=10)
-bitly = Shortener('Bitly', bitly_token=BITLY_ACCESS_TOKEN)
 
 import sqlite3
 conn = sqlite3.connect(DATABASE_PATH)
@@ -34,17 +30,6 @@ def count_users():
 def short(service, url):
     url = 'http://' + url.replace('https://', '').replace('http://', '') # Simple but it works
 
-    if service.lower() == 'google':
-        return google.short(url)
-
-    if service.lower() == 'tinyurl':
-        return tinyurl.short(url)
-
     if service.lower() == 'adfly':
         return adfly.short(url)
 
-    if service.lower() == 'isgd':
-        return isgd.short(url)
-
-    if service.lower() == 'bitly':
-        return bitly.short(url)
